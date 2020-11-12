@@ -3,7 +3,7 @@
 * [Technologies](#technologies)
 
 ## General info
-I created this software because it support #Reminder, because it allow track foreging people, who i.e.helps us doing shopping in #COVID-19.
+I created this software because it supports #Reminder, because it allows track foreging people, who i.e.helps us doing shopping in #COVID-19.
 	
 ## Technologies
 Project is created with:
