@@ -8,4 +8,4 @@ I created this software because it supports #Reminder, because it allows track f
 ## Technologies
 Project is created with:
 * Java version: 11.0.7
-* sqljdbc library version: 1.2.0
+* mysql library version: 5.1.35
