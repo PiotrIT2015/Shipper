@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import com.mysql.jdbc.Statement;
 
 /// Klasa impementujca funkcjonalno bazy danych MySQL
@@ -39,7 +38,6 @@ public class MySQLTest {
     public String viewTable() throws SQLException {
         String query = "select tresc from sr where id=1";
         String tresc = null;
-
         Statement stmt = null;
         try {
             stmt = (Statement) databaseConnection.createStatement();
@@ -47,9 +45,6 @@ public class MySQLTest {
             // Dopki zbir wynikw posiada jakie dane to wypisuj
             while(rs.next())
                 tresc = rs.getString("tresc");
-
-
-
         } catch (SQLException e)
         {
             e.printStackTrace();
@@ -67,13 +62,10 @@ public class MySQLTest {
         try {
             stmt = (Statement) databaseConnection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-
-
             // Zamknij obiekt Statement, aby natychmiast zwolni jego pami
             if (stmt != null) {
                 stmt.close();
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -83,7 +75,6 @@ public class MySQLTest {
         String query = "select * from sr where id=1";
         int high=0;
         int width=0;
-
         Statement stmt = null;
         try {
             stmt = (Statement) databaseConnection.createStatement();
@@ -94,9 +85,6 @@ public class MySQLTest {
                 width =rs.getInt("width");
             }
             System.out.println(high+width);
-
-
-
         } catch (SQLException e)
         {
             e.printStackTrace();
@@ -109,9 +97,8 @@ public class MySQLTest {
     
     public int viewwidth() throws SQLException {
         String query = "select * from sr where id=2";
-        int high=0;
-        int width=0;
-
+        int high = 0;
+        int width = 0;
         Statement stmt = null;
         try {
             stmt = (Statement) databaseConnection.createStatement();
@@ -122,9 +109,6 @@ public class MySQLTest {
                 width =rs.getInt("width");
             }
             System.out.println(high+width);
-
-
-
         } catch (SQLException e)
         {
             e.printStackTrace();
@@ -142,13 +126,10 @@ public class MySQLTest {
         try {
             stmt = (Statement) databaseConnection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-
-
             // Zamknij obiekt Statement, aby natychmiast zwolni jego pami
             if (stmt != null) {
                 stmt.close();
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -161,7 +142,6 @@ public class MySQLTest {
         int za=0;
         int przeciw=0;
         String wstrz =null;
-
         Statement stmt = null;
         try {
             stmt = (Statement) databaseConnection.createStatement();
@@ -173,9 +153,6 @@ public class MySQLTest {
                 wstrz =rs.getString("wstrz");
             }
             System.out.println(za +"   "+ przeciw+ "   " + wstrz);
-
-
-
         } catch (SQLException e)
         {
             e.printStackTrace();

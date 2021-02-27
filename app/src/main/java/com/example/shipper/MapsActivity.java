@@ -23,10 +23,8 @@ import java.util.List;
 import java.sql.SQLException;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-
     private GoogleMap mMap;
     LocationManager locationManager;
-
     MySQLTest baza = new MySQLTest();
 
     @Override
@@ -38,9 +36,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
             return;
         }
         if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
@@ -60,17 +56,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         e.printStackTrace();
                     }
                 }
-
                 @Override
                 public void onStatusChanged(String s, int i, Bundle bundle) {
 
                 }
-
                 @Override
                 public void onProviderEnabled(String s) {
 
                 }
-
                 @Override
                 public void onProviderDisabled(String s) {
 
@@ -93,17 +86,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         e.printStackTrace();
                     }
                 }
-
                 @Override
                 public void onStatusChanged(String s, int i, Bundle bundle) {
 
                 }
-
                 @Override
                 public void onProviderEnabled(String s) {
 
                 }
-
                 @Override
                 public void onProviderDisabled(String s) {
 
